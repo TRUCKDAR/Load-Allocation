@@ -1,0 +1,40 @@
+package escuelaing.edu.co.truckdar.load_allocation.dto.response;
+
+import escuelaing.edu.co.truckdar.load_allocation.model.LoadStatus;
+import escuelaing.edu.co.truckdar.load_allocation.model.TruckTypeRequired;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class FreightLoadResponse {
+    private Long id;
+    private String generatorCompanyId;
+    private String generatorCompanyName;
+    private String cargoDescription;
+    private Double weightTons;
+    private Double volumeM3;
+    private TruckTypeRequired requiredTruckType;
+    private String originCity;
+    private String originDepartment;
+    private Double originLatitude;
+    private Double originLongitude;
+    private String destinationCity;
+    private String destinationDepartment;
+    private Double destinationLatitude;
+    private Double destinationLongitude;
+    private BigDecimal offeredBudget;
+    private LoadStatus status;
+    private String assignedDriverId;
+    private String assignedDriverName;
+    private String assignedVehiclePlate;
+    private LocalDateTime publishedAt;
+    private LocalDateTime assignedAt;
+}
